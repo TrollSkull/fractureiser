@@ -1,8 +1,8 @@
 # Modded Minecraft Malware "fractureiser"
 
-<center>
-<img src="docs/media/logo.svg" alt="Logo">
-</center>
+<p align="center">
+    <img src="docs/media/logo.svg" alt="Logo">
+</p>
 
 ## What?
 `fractureiser` is a [Worm](https://en.wikipedia.org/wiki/Computer_worm) Virus found in several Minecraft projects uploaded to CurseForge and CraftBukkit's dev website. The malware is embedded in multiple mods, some of which were added to highly popular modpacks.
