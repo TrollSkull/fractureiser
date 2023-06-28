@@ -1,72 +1,52 @@
-# Guía de Jugadores con Mods
+# Guía para Jugadores con Mods
 
-Si tú juegas "Vanilla/Vainilla" **solo** con un lanzador confianza such como el lanzador  oficial o Prism, y has tocado mods nunca: estás 100% seguro. Mantente alejado desde mods por ahora.
+Si tú juegas "Vanilla/Vainilla" **solo** con un lanzador confianza como el lanzador oficial o Prism, y nunca has tocado mods: estás 100% seguro. Mantente alejado de los mods por ahora.
 
-Si estás un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar tu máquina/computadora y datos personales no están en riesgo. Puedes hacerlo con los instrucciones abajo.
+Si estás un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar tu máquina/computadora y datos personales no están en riesgo. Puedes hacerlo con las instrucciones abajo.
 
 ### ¿Todavía está pasando?
-**No. Well, kinda.**  
-As of now, with our current knowledge, we believe the `fractureiser` virus has been fully cleaned 
-from current public mod(pack)s.  
+**No. Bueno, un poco.**  
+A partir de ahora, con nuestro conocimiento actual, creemos que el virus `fractureiser` se ha limpiado por completo de los mod(pack)s públicos actuales.
 
-Our current recommendation is that players who have ran the stage2 checker in this page are safe
-to continue playing, however, since mod uploads have been turned back online at both CurseForge 
-and Modrinth, there is now the potential for copycat malware authors to make new viruses. 
+Nuestra recomendación actual es que los jugadores que hayan ejecutado el verificador de etapa 2 en esta página estén seguros para continuar jugando, sin embargo, ya que las cargas de mods se han vuelto a poner en línea tanto en CurseForge y Modrinth, ahora existe la posibilidad de que los autores de malware de imitación creen nuevos virus.
 
-We are in contact with all relevant parties to establish protocols so that this doesn't happen 
-in the future.
+Estamos en contacto con todas las partes relevantes para establecer protocolos para que esto no vuelva a suceder en el futuro.
 
-If you want to play, please go through the diagnostic steps in this page as well as the follow
-up sections on what to do if you are or aren't infected.
+Si desea jugar, siga los pasos de diagnóstico de esta página, así como las siguientes secciones sobre qué hacer si está infectado o no.
 
-### Estructura de Página
-* [What Actually Happened?](#what-actually-happened)
+### Estructura de la Página
+* [¿Qué fue lo que sucedió?](#qué-fue-lo-que-sucedió)
 * [Am I Infected?](#am-i-infected)
 * [I'm Infected, Now What?](#im-infected-now-what)
 * [I'm Not Infected, Now What?](#im-not-infected-now-what)
 * [Frequently Asked Questions](#frequently-asked-questions)
 * [Technical FAQ](#technical-faq)
 
-If you have any questions about fractureiser, please read this page in full, including the FAQ at
-the end, as most of the questions we've been getting are answered here.
+Si tienes preguntas sobre fractureiser, por favor lee esta página completa, incluyendo las preguntas frecuentes al final, ya que la mayoría de las preguntas que hemos estado recibiendo están respondidas aquí.
 
-## What Actually Happened?
+## ¿Qué fue lo que sucedió?
 
-Several innocent looking malicious mods and plugins were initially uploaded by the malware's creator 
-to the mod hosting website CurseForge and plugin hub dev.craftbukkit.org (not the Bukkit 
-software itself). A high-profile mod pack developer downloaded one of these mods to try
-out, which infected files in their computer without their knowledge - this included a copy of a 
-working project that would then be uploaded to CurseForge as a seemingly leigimate file, with the 
-virus included. 
+El creador del malware cargó inicialmente varios mods y complementos maliciosos de aspecto inocente al sitio web de alojamiento de mods CurseForge y al centro de complementos dev.bukkit.org (no al código de Bukkit en sí). Un desarrollador de paquetes de mods de alto perfil descargó uno de estos mods para probar que infectaba archivos en su computadora sin su conocimiento - esto incluía una copia de un proyecto de trabajo que luego se cargaría en CurseForge como un archivo aparentemente legítimo, con el virus incluido.
 
-This process then repeated itself for a few other cases from users on CurseForge and 
-dev.craftbukkit.org, infecting copies of several popular plugins and mods. *There are reports of 
-malicious plugin and mod jars as early
-as mid-April.*
+Este proceso luego se repitió para algunos otros casos de usuarios en CurseForge y dev.bukkit.org, infectando copias de varios plugins y mods populares. *Hay reportes de plugin malicioso y mod jars desde mediados de abril.*
 
-Alongside this, brute force access attempts on high traffic content creator accounts on CurseForge
-were attempted by the malware author. We are currently unsure whether the breach was due to the
-brute force attempt or due to trojan infection on the accounts' owners.
+Además de esto, el autor del malware intentó acceder por fuerza bruta a cuentas de creadores de contenido de alto tráfico en CurseForge. Actualmente no estamos seguros de si la infracción se debió a un intento de fuerza bruta o a una infección troyana en los propietarios de las cuentas.
 
-This malware is composed of multiple "stages", each Stage is responsible for downloading and
-running the next one. In total, there are three known Stages (Stages 1, 2, and 3), with infected
-mod files serving as a "Stage 0" to kick the whole process off.
+Este malware se compone de múltiples "etapas", cada etapa es responsable de descargar y ejecutar la siguiente. En total, hay tres etapas conocidas (etapas 1, 2 y 3), con archivos de mods infectados que sirven como "Etapa 0" para iniciar todo el proceso.
 
-Stage 3 is the "mastermind" of the malware, and we have evidence that it attempts to do all of
-the following:
+La etapa 3 es la "mente maestra" del malware y tenemos pruebas de que intenta hacer todo lo siguiente:
 
-* Propagate itself to *all* `jar` files on the filesystem, possibly infecting mods that
-  were not downloaded from CurseForge or BukkitDev, or other Java programs
-* Steal cookies and login information for many web browsers
-* Replace cryptocurrency addresses in the clipboard with alternates that are presumably owned by
-the attacker
-* Steal Discord credentials
-* Steal Microsoft and Minecraft credentials
+* Se propaga a *todos* los archivos `jar` en el sistema de archivos, posiblemente infectando mods que
+  no se descargaron de CurseForge o BukkitDev, u otros programas Java
+* Robar cookies e información de inicio de sesión de muchos navegadores web
+* Reemplaza las direcciones de criptomonedas en el portapapeles con alternativas que presumiblemente sean propiedad de
+el atacante
+* Robar credenciales de Discord
+* Robar credenciales de Microsoft y Minecraft
 
 (See [technical details](tech.md) for more info)
 
-Because of its behavior, we are **very confident** this is a **targeted attack against the modded 
-Minecraft ecosystem**. It's quite bad.
+Debido a su comportamiento, estamos **muy seguros** de que se trata de un **ataque dirigido contra el ecosistema de Minecraft modificado**. Esto es bastante malo.
 
 **Until further notice, exercise extreme caution with Minecraft mod downloads, regardless
 of origin.** While the control server for this malware is currently offline, **any
