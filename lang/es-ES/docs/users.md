@@ -16,7 +16,7 @@ Si desea jugar, siga los pasos de diagnóstico de esta página, así como las si
 
 ### Estructura de la Página
 * [¿Qué fue lo que sucedió?](#qué-fue-lo-que-sucedió)
-* [Am I Infected?](#am-i-infected)
+* [¿Estoy infectado?](#estoy-infectado)
 * [I'm Infected, Now What?](#im-infected-now-what)
 * [I'm Not Infected, Now What?](#im-not-infected-now-what)
 * [Frequently Asked Questions](#frequently-asked-questions)
@@ -44,63 +44,59 @@ el atacante
 * Robar credenciales de Discord
 * Robar credenciales de Microsoft y Minecraft
 
-(See [technical details](tech.md) for more info)
+(Mira [detalles técnicos](tech.md) para más información)
 
 Debido a su comportamiento, estamos **muy seguros** de que se trata de un **ataque dirigido contra el ecosistema de Minecraft modificado**. Esto es bastante malo.
 
-**Until further notice, exercise extreme caution with Minecraft mod downloads, regardless
-of origin.** While the control server for this malware is currently offline, **any
-download from Curseforge or the Bukkit plugin repository in the last 2-3 weeks should be
-treated as potentially malicious**. Some malware scanners have started adding signatures
-to their databases, but until this rolls out to all of them, please exercise caution.
+**Hasta nuevo aviso, tenga mucho cuidado con las descargas de mods de Minecraft, sin importar su origen.**
+Si bien el servidor de control para este malware está actualmente fuera de línea, **cualquier descarga desde Curseforge o el repositorio de complementos de Bukkit en las últimas 2 a 3 semanas debe tratarse como potencialmente malicioso**.
+Algunos escáneres de malware han comenzado a agregar firmas a sus bases de datos, pero hasta que esto se implemente en todos ellos, tenga cuidado.
 
-*At this point we cannot be confident claiming any hosting service is unaffected*. Please
-exercise caution regardless of what site you use. Even Maven repositories may be infected,
-and this malware goes back months.
+*En este punto, no podemos estar seguros de afirmar que ningún servicio de alojamiento se ve afectado*.
+Tenga cuidado independientemente del sitio que utilice. Incluso los repositorios de Maven pueden estar infectados,
+y este malware se remonta a meses.
 
-Currently, new infections are impossible as the attacker's server has been shut down,
-existing infections may still be active.
+Actualmente, las nuevas infecciones son imposibles ya que el servidor del atacante se ha cerrado,
+pero las infecciones existentes aún pueden estar activas.
 
 <!--### Get to the point, how do I fix this?
 
 ![Flowchart](media/flowchart.png)-->
 
-### Wait, what the f*** is a "stage"?
+### Espera, ¿qué dia**** es una "etapa"?
+<!-- Cambiar el diagrama por uno traducido (Ya existe un pr de esto,
+solo se debe cambiarlo y ya)-->
 
-![Stage Diagram](media/stages.png)
+![Diagrama de etapas](media/stages.png)
 
-## Am I Infected?
+## ¿Estoy infectado?
+El malware tiene varias etapas, por lo que preguntar si está infectado en realidad se responde en dos preguntas
 
-The malware has multiple stages, so asking whether you are infected is actually two questions
+### ¿Alguno de mis mods tiene la Etapa 0?
+Existe una variedad de escáneres que toman un archivo mod y detectan si está infectado por la Etapa 0 de
+el malware.
 
-### Do any of my mod files have Stage 0?
-A variety of scanners exist that take a mod file and detect whether it is infected by Stage 0 of
-the malware.
+* [Escáner de Overwolf](https://github.com/overwolf/jar-infection-scanner/releases)
+  * Esta es la opción recomendada para verificar todo el juego: solo apúntelo a la carpeta de instalación de CurseForge o en cualquier otro lugar donde tenga sus instancias guardadas
+  * Este es un programa independiente y no requiere la aplicación Overwolf instalada
+* [Escáner en línea basado en sitio web de douira](https://douira.github.io/fractureiser-web-detector/)
+* [Nekodetector de corteza](https://github.com/MCRcortex/nekodetector/releases)
+  * Haga clic en "Activos" para mostrar el archivo ejecutable; requiere que Java esté instalado
 
-* Overwolf's [scanner](https://github.com/overwolf/jar-infection-scanner/releases)
-  * This is the recommended option for checking your entire game - just point it at the CurseForge 
-installation folder or wherever else  you have your instances saved
-  * This is a standalone program and does not require the Overwolf app installed
-* douira's [website-based online scanner](https://douira.github.io/fractureiser-web-detector/)
-* cortex's [nekodetector](https://github.com/MCRcortex/nekodetector/releases) 
-  * Click on "Assets" to show the runnable file - requires Java to be installed
+De forma aislada, la infección de etapa 0 no es peligrosa si los archivos se eliminan y nunca se ejecutan.
 
-In isolation, stage 0 infection is not dangerous if the files are deleted and never ran.
+### ¿Están presentes los archivos de la Etapa 2 en mi sistema?
 
-### Are Stage 2 files present on my system?
+Los archivos de la etapa 2 que están en su sistema significa que las etapas 0 y 1 del malware se ejecutaron correctamente.
+Si están presentes, es probable que estés *totalmente infectado* y deberías seguir leyendo las instrucciones del documento.
 
-Stage 2 files being on your system means that the stages 0 and 1 of the malware ran successfully.
-If they are present at all, you are likely *fully infected* and should continue reading the
-instructions in the document.
+Muchos detectores de virus están comenzando a detectar archivos de etapa 2. Si recibe una advertencia de que dichos archivos se encontraron y eliminaron, continúe con la sección "Estoy infectado, ¿y ahora qué?"
 
-Many virus scanners are starting to detect stage 2 files. If you get a warning that such
-files were found and removed, proceed to the "I'm Infected, Now What?" section.
+De lo contrario, puede verificar manualmente haciendo lo siguiente, según su plataforma:
 
-Otherwise, you can check manually by doing the following, based on your platform:
+#### Instrucciones de Windows
 
-#### Windows Instructions
-
-* Open your Start menu with the Windows Key, and type `%localappdata%` - it should appear as such:
+* Abra su menú inicio con la tecla de Windows y escriba `%localappdata%`; debería aparecer así:
 ![Search results for the above query](media/localappdata.png)
 
 * Inside the Local appdata folder, you must ensure that your Explorer is set to view both 
