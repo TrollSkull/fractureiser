@@ -1,8 +1,8 @@
 # Guía para Jugadores con Mods
 
-Si tú juegas "Vanilla/Vainilla" **solo** con un lanzador confianza como el lanzador oficial o Prism, y nunca has tocado mods: estás 100% seguro. Mantente alejado de los mods por ahora.
+Si tú juegas **solo** Minecraft "Vanilla/Vainilla" con un lanzador confianza como el lanzador oficial o Prism, y nunca has tocado mods: estás 100% seguro. Mantente alejado de los mods por ahora.
 
-Si estás un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar tu máquina/computadora y datos personales no están en riesgo. Puedes hacerlo con las instrucciones abajo.
+Si eres un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar que tu máquina/computadora y datos personales no están en riesgo. Puedes hacerlo con las instrucciones abajo.
 
 ### ¿Todavía está pasando?
 **No. Bueno, un poco.**  
@@ -26,7 +26,7 @@ Si tienes preguntas sobre fractureiser, por favor lee esta página completa, inc
 
 ## ¿Qué fue lo que sucedió?
 
-El creador del malware cargó inicialmente varios mods y complementos maliciosos de aspecto inocente al sitio web de alojamiento de mods CurseForge y al centro de complementos dev.bukkit.org (no al código de Bukkit en sí). Un desarrollador de paquetes de mods de alto perfil descargó uno de estos mods para probar que infectaba archivos en su computadora sin su conocimiento - esto incluía una copia de un proyecto de trabajo que luego se cargaría en CurseForge como un archivo aparentemente legítimo, con el virus incluido.
+El creador del malware cargó inicialmente varios mods y complementos maliciosos de aspecto inocente al sitio web de alojamiento de mods CurseForge y al centro de complementos dev.bukkit.org (no al código de Bukkit en sí). Un desarrollador de modpacks de alto perfil descargó uno de estos mods para probar si este infectaba archivos en su computadora sin su conocimiento - esto incluía una copia de un proyecto de trabajo que luego se cargaría en CurseForge como un archivo aparentemente legítimo, con el virus incluido.
 
 Este proceso luego se repitió para algunos otros casos de usuarios en CurseForge y dev.bukkit.org, infectando copias de varios plugins y mods populares. *Hay reportes de plugin malicioso y mod jars desde mediados de abril.*
 
@@ -49,7 +49,7 @@ el atacante
 Debido a su comportamiento, estamos **muy seguros** de que se trata de un **ataque dirigido contra el ecosistema de Minecraft modificado**. Esto es bastante malo.
 
 **Hasta nuevo aviso, tenga mucho cuidado con las descargas de mods de Minecraft, sin importar su origen.**
-Si bien el servidor de control para este malware está actualmente fuera de línea, **cualquier descarga desde Curseforge o el repositorio de complementos de Bukkit en las últimas 2 a 3 semanas debe tratarse como potencialmente malicioso**.
+Si bien el servidor de control de este malware está actualmente fuera de línea, **cualquier descarga desde Curseforge o el repositorio de complementos de Bukkit en las últimas 2 a 3 semanas debe tratarse como potencialmente malicioso**.
 Algunos escáneres de malware han comenzado a agregar firmas a sus bases de datos, pero hasta que esto se implemente en todos ellos, tenga cuidado.
 
 *En este punto, no podemos estar seguros de afirmar que ningún servicio de alojamiento se ve afectado*.
@@ -77,7 +77,7 @@ Existe una variedad de escáneres que toman un archivo mod y detectan si está i
 el malware.
 
 * [Escáner de Overwolf](https://github.com/overwolf/jar-infection-scanner/releases)
-  * Esta es la opción recomendada para verificar todo el juego: solo apúntelo a la carpeta de instalación de CurseForge o en cualquier otro lugar donde tenga sus instancias guardadas
+  * Esta es la opción recomendada para verificar todo el juego: solo apúntelo a la carpeta de instalación de CurseForge o en cualquier otro lugar donde tenga sus mods guardados
   * Este es un programa independiente y no requiere la aplicación Overwolf instalada
 * [Escáner en línea basado en sitio web de douira](https://douira.github.io/fractureiser-web-detector/)
 * [Nekodetector de corteza](https://github.com/MCRcortex/nekodetector/releases)
@@ -87,7 +87,7 @@ De forma aislada, la infección de etapa 0 no es peligrosa si los archivos se el
 
 ### ¿Están presentes los archivos de la Etapa 2 en mi sistema?
 
-Los archivos de la etapa 2 que están en su sistema significa que las etapas 0 y 1 del malware se ejecutaron correctamente.
+Si están los archivos de la etapa 2 en su sistema significa que las etapas 0 y 1 del malware se ejecutaron correctamente.
 Si están presentes, es probable que estés *totalmente infectado* y deberías seguir leyendo las instrucciones del documento.
 
 Muchos detectores de virus están comenzando a detectar archivos de etapa 2. Si recibe una advertencia de que dichos archivos se encontraron y eliminaron, continúe con la sección "Estoy infectado, ¿y ahora qué?"
@@ -99,26 +99,26 @@ De lo contrario, puede verificar manualmente haciendo lo siguiente, según su pl
 * Abra su menú inicio con la tecla de Windows y escriba `%localappdata%`; debería aparecer así:
 ![Search results for the above query](media/localappdata.png)
 
-* Inside the Local appdata folder, you must ensure that your Explorer is set to view both 
-`Hidden Items`, and `Protected Operating System Files`.
-  * This can be done from View > Options
-  * If you are unsure how to do this, a video explanation 
-[can be found here](https://youtu.be/KLTlTlnXeKs).
-  * Windows 11 users can find the same options under the "View" button at the top ribbon, as 
-  well as  the  "..." button on the rightmost side of it
+* Dentro de la carpeta "Local appdata", debe asegurarse de que su Explorador esté configurado para ver ambos
+`Elementos ocultos` y `Archivos del sistema operativo protegidos`.
+  * Esto se puede hacer desde Ver > Opciones
+  * Si no está seguro de cómo hacer esto, una explicación en video
+[se puede encontrar aquí](https://youtu.be/KLTlTlnXeKs).
+  * Los usuarios de Windows 11 pueden encontrar las mismas opciones en el botón "Ver" en la cinta superior, como
+  así como el botón "..." en el extremo derecho
 
-* Locate a folder named `Microsoft Edge`. The SPACE between "Microsoft" and "Edge" is
-  important - as `MicrosoftEdge` is a legitimate folder that is used by Edge.  The virus
-  simply named it like that to disguise itself.  
-  * The legitimate folder might also be called `Microsoft\Edge` (an `Edge` folder inside a 
-`Microsoft` folder).
-  * The legitimate folder doesn't *have* to exist - if you don't have any Edge related folders,
-  you're safe.
-  * Both legitimate folders can exist at the same time, this is okay too.
-* If `Microsoft Edge` is present, you were infected. If this is the case, permanently delete the 
-folder and everything inside it.
-  * If the folder can not be deleted, you must stop any Java programs currently running via your 
-Task Manager.
+* Busque una carpeta llamada `Microsoft Edge`. El ESPACIO entre "Microsoft" y "Edge" es
+  importante, ya que `MicrosoftEdge` es una carpeta legítima que utiliza Edge. El virus
+  simplemente lo nombró así para disfrazarse.
+  * La carpeta legítima también podría llamarse `Microsoft\Edge` (una carpeta `Edge` dentro de la
+carpeta `Microsoft`).
+  * La carpeta legítima no *tiene* que existir; si no tiene ninguna carpeta relacionada con Edge,
+  estás seguro.
+  * Ambas carpetas legítimas pueden existir al mismo tiempo, esto también está bien.
+* Si `Microsoft Edge` está presente, usted está infectado. Si este es el caso, elimine permanentemente la
+carpeta y todo lo que hay dentro.
+  * Si la carpeta no se puede eliminar, debe detener cualquier programa Java que se esté ejecutando actualmente a través de su
+Administrador de tareas.
 
 #### MacOS Information
 
