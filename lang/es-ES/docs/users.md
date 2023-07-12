@@ -2,10 +2,10 @@
 
 Si tú juegas **solo** Minecraft "Vanilla/Vainilla" con un lanzador confianza como el lanzador oficial o Prism, y nunca has tocado mods: estás 100% seguro. Mantente alejado de los mods por ahora.
 
-Si eres un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar que tu máquina/computadora y datos personales no están en riesgo. Puedes hacerlo con las instrucciones abajo.
+Si eres un jugador de Minecraft con mods, necesitas verificar si has estado infectado por el malware fractureiser para asegurar que tu máquina/computadora y datos personales no están en riesgo: puedes hacerlo con las instrucciones abajo.
 
 ### ¿Todavía está pasando?
-**No. Bueno, un poco.**  
+**No. Bueno, un poco.**
 A partir de ahora, con nuestro conocimiento actual, creemos que el virus `fractureiser` se ha limpiado por completo de los mod(pack)s públicos actuales.
 
 Nuestra recomendación actual es que los jugadores que hayan ejecutado el verificador de etapa 2 en esta página estén seguros para continuar jugando, sin embargo, ya que las cargas de mods se han vuelto a poner en línea tanto en CurseForge y Modrinth, ahora existe la posibilidad de que los autores de malware de imitación creen nuevos virus.
@@ -26,7 +26,7 @@ Si tienes preguntas sobre fractureiser, por favor lee esta página completa, inc
 
 ## ¿Qué fue lo que sucedió?
 
-El creador del malware cargó inicialmente varios mods y complementos maliciosos de aspecto inocente al sitio web de alojamiento de mods CurseForge y al centro de complementos dev.bukkit.org (no al código de Bukkit en sí). Un desarrollador de modpacks de alto perfil descargó uno de estos mods para probar si este infectaba archivos en su computadora sin su conocimiento - esto incluía una copia de un proyecto de trabajo que luego se cargaría en CurseForge como un archivo aparentemente legítimo, con el virus incluido.
+El creador del malware cargó inicialmente varios mods y plugins maliciosos de aspecto inocente al sitio web de alojamiento de mods CurseForge y al centro de plugins dev.bukkit.org (no al código de Bukkit en sí). Un desarrollador de modpacks de alto perfil descargó uno de estos mods para probar si este infectaba archivos en su computadora sin su conocimiento - esto incluía una copia de un proyecto de trabajo que luego se cargaría en CurseForge como un archivo aparentemente legítimo, con el virus incluido.
 
 Este proceso luego se repitió para algunos otros casos de usuarios en CurseForge y dev.bukkit.org, infectando copias de varios plugins y mods populares. *Hay reportes de plugin malicioso y mod jars desde mediados de abril.*
 
